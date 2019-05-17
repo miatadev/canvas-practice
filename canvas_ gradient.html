@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+    <head> 
+        <meta charset="UTF-8"/>
+        <meta name="viewport"
+        content="width=device-width, initialscale=1.0">
+        <meta http-equiv="X-UA-Compatible"
+        content="ie=edge">
+        <title> Canvas</title>
+
+    </head>
+
+    </body> 
+        <canvas id="myCanvas" width="200" height="100"
+        style="border: 1px solid #000000;">
+        </canvas>
+
+        <script> 
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext ("2d");
+           
+            ctx. moveTo (0,20);
+            ctx.lineTo (20,80);
+            ctx.lineTo (70,100);
+            ctx.stroke();
+            ctx.strokeStyle = "blue";
+            ctx.stroke();
+
+            ctx.font ="30px Arial";
+            ctx.fillText ("hello World!", 20,50);
+
+        var grd = ctx.createLinearGradient (0,0,200,100);
+
+            grd.addColorStop (0, "blue");
+            grd.addColorStop (1,'red');
+
+            ctx.fillStyle = grd;
+            ctx.fillRect (10,10,180,80);
+
+        </script>
+    </body>
+
+
+
+<html>
